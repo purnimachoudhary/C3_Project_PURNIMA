@@ -62,8 +62,12 @@ public class Restaurant {
         return name;
     }
 
-    public Double getOrderTotalCost(List<Item> menu) {
-        return  0.0;
+    public int getOrderTotalCost(List<Item> menu) {
+        int orderCost = 0;
+        for (Item item : menu) {
+                orderCost += item.getPrice();
+        }
+        return  orderCost;
     }
 
 }

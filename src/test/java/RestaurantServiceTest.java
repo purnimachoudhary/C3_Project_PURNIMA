@@ -114,14 +114,15 @@ public void Is_restaurant_open_should_return_false_if_time_is_outside_opening_an
     // TDD
     // items will be in the menu
    // return a total order value of selected items
-    // check that items selected items price will be added to total value
-    // uncheck items will be removed from the order value
 
     @Test
     public void when_getOrderTotalCost_method_will_be_called_then_it_should_be_return_greater_then_0_value() {
         restaurantData();
-        List<Item> menu = new ArrayList<Item>();
-        assertThat(restaurant.getOrderTotalCost(menu), greaterThan(0.0));
-        
+        List<Item> menu = restaurant.getMenu();
+
+        assertThat(restaurant.getOrderTotalCost(menu), greaterThan(0));
+
     }
-}
+
+
+    }
